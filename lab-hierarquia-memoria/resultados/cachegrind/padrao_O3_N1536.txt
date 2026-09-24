@@ -1,0 +1,25 @@
+==11678== Cachegrind, a high-precision tracing profiler
+==11678== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==11678== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==11678== Command: ./bin/matmul_padrao_O3 1536
+==11678== 
+--11678-- warning: L3 cache found, using its data for the LL simulation.
+--11678-- warning: specified LL cache: line_size 64  assoc 1  total_size 335,544,320
+--11678-- warning: simulated LL cache: line_size 64  assoc 1  total_size 268,435,456
+[Matmul Padrão] N: 1536 | Tempo: 104.2898 s | GFLOPS: 0.07 | Verificação: OK
+==11678== 
+==11678== I refs:        20,009,449,131
+==11678== I1  misses:             1,515
+==11678== LLi misses:             1,508
+==11678== I1  miss rate:           0.00%
+==11678== LLi miss rate:           0.00%
+==11678== 
+==11678== D refs:         5,445,321,768  (5,440,588,154 rd   + 4,733,614 wr)
+==11678== D1  misses:     3,635,441,980  (3,632,492,432 rd   + 2,949,548 wr)
+==11678== LLd misses:         1,519,851  (      634,710 rd   +   885,141 wr)
+==11678== D1  miss rate:           66.8% (         66.8%     +      62.3%  )
+==11678== LLd miss rate:            0.0% (          0.0%     +      18.7%  )
+==11678== 
+==11678== LL refs:        3,635,443,495  (3,632,493,947 rd   + 2,949,548 wr)
+==11678== LL misses:          1,521,359  (      636,218 rd   +   885,141 wr)
+==11678== LL miss rate:             0.0% (          0.0%     +      18.7%  )

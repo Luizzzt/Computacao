@@ -1,0 +1,46 @@
+================ Compilação -O0 ================
+[Varredura Linha ] N:   512 | Pares:     131072 | Tempo: 0.000386 s
+[Varredura Coluna] N:   512 | Pares:     131072 | Tempo: 0.000875 s
+   -> Slowdown (T_coluna / T_linha) = 2.27x
+[Varredura Linha ] N:  1024 | Pares:     524288 | Tempo: 0.002244 s
+[Varredura Coluna] N:  1024 | Pares:     524288 | Tempo: 0.003341 s
+   -> Slowdown (T_coluna / T_linha) = 1.49x
+[Varredura Linha ] N:  2048 | Pares:    2097152 | Tempo: 0.006434 s
+[Varredura Coluna] N:  2048 | Pares:    2097152 | Tempo: 0.024563 s
+   -> Slowdown (T_coluna / T_linha) = 3.82x
+[Varredura Linha ] N:  4096 | Pares:    8388608 | Tempo: 0.026626 s
+[Varredura Coluna] N:  4096 | Pares:    8388608 | Tempo: 0.101338 s
+   -> Slowdown (T_coluna / T_linha) = 3.81x
+[Varredura Linha ] N:  8192 | Pares:   33554432 | Tempo: 0.101256 s
+[Varredura Coluna] N:  8192 | Pares:   33554432 | Tempo: 0.441907 s
+   -> Slowdown (T_coluna / T_linha) = 4.36x
+
+================ Compilação -O3 ================
+[Varredura Linha ] N:   512 | Pares:     131072 | Tempo: 0.000075 s
+[Varredura Coluna] N:   512 | Pares:     131072 | Tempo: 0.000956 s
+   -> Slowdown (T_coluna / T_linha) = 12.75x
+[Varredura Linha ] N:  1024 | Pares:     524288 | Tempo: 0.000299 s
+[Varredura Coluna] N:  1024 | Pares:     524288 | Tempo: 0.003805 s
+   -> Slowdown (T_coluna / T_linha) = 12.73x
+[Varredura Linha ] N:  2048 | Pares:    2097152 | Tempo: 0.001270 s
+[Varredura Coluna] N:  2048 | Pares:    2097152 | Tempo: 0.031325 s
+   -> Slowdown (T_coluna / T_linha) = 24.67x
+[Varredura Linha ] N:  4096 | Pares:    8388608 | Tempo: 0.005261 s
+[Varredura Coluna] N:  4096 | Pares:    8388608 | Tempo: 0.154818 s
+   -> Slowdown (T_coluna / T_linha) = 29.43x
+[Varredura Linha ] N:  8192 | Pares:   33554432 | Tempo: 0.021017 s
+[Varredura Coluna] N:  8192 | Pares:   33554432 | Tempo: 0.642327 s
+   -> Slowdown (T_coluna / T_linha) = 30.56x
+
+================ Tabela 1 ================
+otimizacao  N     pares     t_linha   t_coluna  slowdown
+O0          512   131072    0.000386  0.000875  2.27
+O0          1024  524288    0.002244  0.003341  1.49
+O0          2048  2097152   0.006434  0.024563  3.82
+O0          4096  8388608   0.026626  0.101338  3.81
+O0          8192  33554432  0.101256  0.441907  4.36
+O3          512   131072    0.000075  0.000956  12.75
+O3          1024  524288    0.000299  0.003805  12.73
+O3          2048  2097152   0.001270  0.031325  24.67
+O3          4096  8388608   0.005261  0.154818  29.43
+O3          8192  33554432  0.021017  0.642327  30.56

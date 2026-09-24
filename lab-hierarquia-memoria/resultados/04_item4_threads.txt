@@ -1,0 +1,28 @@
+Núcleos disponíveis nesta máquina (nproc): 2
+
+================ matmul_pthreads (-O3) ================
+[Matmul Pthreads] N: 1536 | Threads:  1 | Tempo: 20.7724 s | GFLOPS: 0.35 | Verificação: OK
+[Matmul Pthreads] N: 1536 | Threads:  2 | Tempo: 13.9484 s | GFLOPS: 0.52 | Verificação: OK
+[Matmul Pthreads] N: 1536 | Threads:  4 | Tempo: 13.9974 s | GFLOPS: 0.52 | Verificação: OK
+[Matmul Pthreads] N: 1536 | Threads:  8 | Tempo: 13.6356 s | GFLOPS: 0.53 | Verificação: OK
+[Matmul Pthreads] N: 1536 | Threads: 16 | Tempo: 13.7628 s | GFLOPS: 0.53 | Verificação: OK
+
+================ matmul_pthreads_bloco (-O3) ================
+[Matmul Pthreads+Bloco] N: 1536 | Threads:  1 | Bloco B: 64 | Tempo: 0.9019 s | GFLOPS: 8.04 | Verificação: OK
+[Matmul Pthreads+Bloco] N: 1536 | Threads:  2 | Bloco B: 64 | Tempo: 0.9784 s | GFLOPS: 7.41 | Verificação: OK
+[Matmul Pthreads+Bloco] N: 1536 | Threads:  4 | Bloco B: 64 | Tempo: 1.0161 s | GFLOPS: 7.13 | Verificação: OK
+[Matmul Pthreads+Bloco] N: 1536 | Threads:  8 | Bloco B: 64 | Tempo: 0.9533 s | GFLOPS: 7.60 | Verificação: OK
+[Matmul Pthreads+Bloco] N: 1536 | Threads: 16 | Bloco B: 64 | Tempo: 1.0213 s | GFLOPS: 7.10 | Verificação: OK
+
+================ Tabela 3 ================
+versao          N     threads  tempo    gflops  speedup  eficiencia
+pthreads        1536  1        20.7724  0.35    1.00     1.00
+pthreads        1536  2        13.9484  0.52    1.49     0.74
+pthreads        1536  4        13.9974  0.52    1.48     0.37
+pthreads        1536  8        13.6356  0.53    1.52     0.19
+pthreads        1536  16       13.7628  0.53    1.51     0.09
+pthreads_bloco  1536  1        0.9019   8.04    1.00     1.00
+pthreads_bloco  1536  2        0.9784   7.41    0.92     0.46
+pthreads_bloco  1536  4        1.0161   7.13    0.89     0.22
+pthreads_bloco  1536  8        0.9533   7.60    0.95     0.12
+pthreads_bloco  1536  16       1.0213   7.10    0.88     0.06

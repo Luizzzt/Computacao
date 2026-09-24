@@ -1,0 +1,39 @@
+================ Compilação -O0 ================
+[Matmul Padrão] N: 512 | Tempo: 0.5807 s | GFLOPS: 0.46 | Verificação: OK
+[Matmul Blocado] N: 512 | Bloco B: 64 | Tempo: 0.4730 s | GFLOPS: 0.57 | Verificação: OK
+[Matmul Padrão] N: 1024 | Tempo: 4.8928 s | GFLOPS: 0.44 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 64 | Tempo: 3.8018 s | GFLOPS: 0.56 | Verificação: OK
+[Matmul Padrão] N: 1536 | Tempo: 19.9665 s | GFLOPS: 0.36 | Verificação: OK
+[Matmul Blocado] N: 1536 | Bloco B: 64 | Tempo: 12.7147 s | GFLOPS: 0.57 | Verificação: OK
+
+================ Compilação -O3 ================
+[Matmul Padrão] N: 512 | Tempo: 0.4989 s | GFLOPS: 0.54 | Verificação: OK
+[Matmul Blocado] N: 512 | Bloco B: 64 | Tempo: 0.0337 s | GFLOPS: 7.97 | Verificação: OK
+[Matmul Padrão] N: 1024 | Tempo: 4.4852 s | GFLOPS: 0.48 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 64 | Tempo: 0.2586 s | GFLOPS: 8.30 | Verificação: OK
+[Matmul Padrão] N: 1536 | Tempo: 20.6737 s | GFLOPS: 0.35 | Verificação: OK
+[Matmul Blocado] N: 1536 | Bloco B: 64 | Tempo: 1.1024 s | GFLOPS: 6.57 | Verificação: OK
+
+================ Ajuste do tamanho do bloco (-O3, N=1024) ================
+[Matmul Blocado] N: 1024 | Bloco B: 8 | Tempo: 0.6523 s | GFLOPS: 3.29 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 16 | Tempo: 0.4132 s | GFLOPS: 5.20 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 32 | Tempo: 0.2950 s | GFLOPS: 7.28 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 64 | Tempo: 0.2897 s | GFLOPS: 7.41 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 128 | Tempo: 0.2522 s | GFLOPS: 8.51 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 256 | Tempo: 0.2712 s | GFLOPS: 7.92 | Verificação: OK
+[Matmul Blocado] N: 1024 | Bloco B: 512 | Tempo: 0.2906 s | GFLOPS: 7.39 | Verificação: OK
+
+================ Resumo ================
+versao  otimizacao  N     bloco  tempo    gflops
+padrao  O0          512   -      0.5807   0.46
+bloco   O0          512   64     0.4730   0.57
+padrao  O0          1024  -      4.8928   0.44
+bloco   O0          1024  64     3.8018   0.56
+padrao  O0          1536  -      19.9665  0.36
+bloco   O0          1536  64     12.7147  0.57
+padrao  O3          512   -      0.4989   0.54
+bloco   O3          512   64     0.0337   7.97
+padrao  O3          1024  -      4.4852   0.48
+bloco   O3          1024  64     0.2586   8.30
+padrao  O3          1536  -      20.6737  0.35
+bloco   O3          1536  64     1.1024   6.57
